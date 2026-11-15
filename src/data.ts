@@ -18,9 +18,7 @@ export const cars = [
   { name: 'Lamborghini Huracan', image: 'ddb3b.png', rating: '4.3', reviews: '2.236', seats: 2, price: '$2,300' },
 ] as const
 
-const review = "I feel very secure when using caretall's services. Your customer care team is very enthusiastic and the driver is always on time."
 export const testimonials = [
-  { name: 'Jenny Wilson', location: 'From New York, US', text: 'I have been using your services for 3 years. Your service is great, I will continue to use your service.', image: 'd73cc.png' },
-  { name: 'Charlie Johnson', location: 'From New York, US', text: review, image: 'd73cc.png' },
-  { name: 'Charlie Johnson', location: 'From New York, US', text: review, image: 'bd4d8.png' },
+  { name: 'Charlie Johnson', location: 'From New York, US', text: "I feel very secure when using caretall's services. Your customer care team is very enthusiastic and the driver is always on time.", image: 'd73cc.png' },
+  { name: 'Jenny Wilson', location: 'From New York, US', text: 'I have been using your services for 3 years. Your service is great, I will continue to use your service.', image: 'bd4d8.png' },
 ] as const

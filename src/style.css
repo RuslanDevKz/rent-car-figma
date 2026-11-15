@@ -99,14 +99,14 @@ h1, h2, h3, p, .tag, .header-menu a, .header-menu button { text-box: trim-both c
 .quote-left, .quote-right { position:absolute; }
 .quote-left { left:max(8%, calc(50% - 583px)); top:90px; }
 .quote-right { left:calc(75% - 25px); top:-70px; transform:scaleX(-1); }
-.review-track { display:flex; position:relative; width:max-content; gap:40px; left:50%; translate:-50% 0; margin-top:80px; }
-.review-card { display:flex; align-items:center; width:794px; height:438px; background:white; border-radius:24px; overflow:hidden; box-shadow:0 12px 24px rgb(16 76 139 / 16%); }
-.review-photo { object-fit:cover; flex:none; }
-.review-copy { min-width:0; flex:1; padding:40px; }
+.review-track { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); position:relative; width:min(1240px, calc(100% - 64px)); gap:32px; margin:80px auto 0; }
+.review-card { display:flex; min-width:0; background:white; border-radius:24px; overflow:hidden; box-shadow:0 12px 24px rgb(16 76 139 / 16%); }
+.review-photo { width:42%; height:auto; object-fit:cover; flex:none; }
+.review-copy { min-width:0; flex:1; padding:clamp(24px, 2.5vw, 40px); }
 .score { display:flex; align-items:baseline; gap:6px; margin-bottom:24px; text-box:none; font-size:24px; font-weight:500; color:#383838; }
 .score strong { line-height:1; text-box:trim-both cap alphabetic; font-size:64px; font-weight:500; }
-.review-copy blockquote { margin-top:48px; font-size:18px; line-height:1.5; color:#282828; text-indent:-.45em; }
-.review-by { margin-top:80px; }
+.review-copy blockquote { margin-top:32px; font-size:18px; line-height:1.5; color:#282828; text-indent:-.45em; }
+.review-by { margin-top:32px; }
 .review-by h3 { font-size:24px; font-weight:500; color:#252525; }
 .review-by p { margin-top:16px; color:#838383; font-size:14px; }
 
@@ -151,9 +151,9 @@ dialog::backdrop { background:rgb(5 28 52 / 55%); }
   .specs { grid-template-columns:138px 1fr; column-gap:0; }
 }
 @media(min-width:1001px) {
-  .review-copy { align-self:stretch; display:flex; flex-direction:column; align-items:flex-start; }
-  .review-copy blockquote { min-height:94px; }
-  .review-by { margin-top:auto; }
+  .review-card { min-height:438px; }
+  .review-copy { display:flex; flex-direction:column; align-items:flex-start; }
+  .review-by { margin-top:auto; padding-top:24px; }
 }
 @media(max-width:1190px) {
   .header-menu nav { gap:24px; }
@@ -189,10 +189,8 @@ dialog::backdrop { background:rgb(5 28 52 / 55%); }
   .benefits p { white-space:normal; }
   .download-copy { max-width:50%; }
   .reviews { min-height:0; padding:72px 24px; }
-  .review-track { width:min(100%,794px); translate:none; left:auto; margin:48px auto 0; display:grid; gap:24px; }
-  .review-card { width:100%; height:auto; }
-  .review-photo { width:38%; height:auto; align-self:stretch; }
-  .review-copy blockquote, .review-by { margin-top:32px; }
+  .review-track { grid-template-columns:minmax(0,1fr); width:min(100%,794px); margin-top:48px; gap:24px; }
+  .review-photo { width:38%; }
 }
 @media(max-width:760px) {
   .shell { width:calc(100% - 40px); }
@@ -215,9 +213,7 @@ dialog::backdrop { background:rgb(5 28 52 / 55%); }
   .deals { min-height:0; padding-block:64px; }
   .car-grid { margin-block:48px; }
   .reviews { min-height:0; padding:70px 20px; }
-  .review-track { width:min(100%,520px); translate:none; left:auto; margin:48px auto 0; display:grid; gap:24px; }
-  .review-card { width:100%; height:auto; }
-  .review-photo { width:38%; height:auto; align-self:stretch; }
+  .review-track { width:min(100%,520px); }
   .review-copy { padding:24px; }
   .score strong { font-size:40px; }
   .score { margin-bottom:16px; }

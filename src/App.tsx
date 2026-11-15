@@ -145,8 +145,8 @@ function Reviews() {
   return <section className="reviews" aria-label="Testimonials">
     <img src={asset('c4033.svg')} className="quote-left" alt="" />
     <img src={asset('f8510.svg')} className="quote-right" alt="" />
-    <Heading label="TESTIMONIALS">What peole say about us?</Heading>
-    <div className="review-track">{testimonials.map((review, i) => <article className="review-card" key={i}>
+    <Heading label="TESTIMONIALS">What people say about us?</Heading>
+    <div className="review-track">{testimonials.map((review) => <article className="review-card" key={review.name}>
       <img className="review-photo" src={asset(review.image)} width="397" height="438" alt="" />
       <div className="review-copy">
         <p className="score"><strong>5.0</strong><span>stars</span></p>
